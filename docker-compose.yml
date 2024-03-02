@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  tag-monitor:
+    image: lyy0709/docker-tag-monitor:latest
+    volumes:
+      - ./data:/data
+    environment:
+      - API_URLS=https://registry.hub.docker.com/v2/repositories/xyhelper/cockroachai/tags/,https://registry.hub.docker.com/v2/repositories/xyhelper/cdn-oaistatic/tags/
+      - WEBHOOK_URL=https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=企业微信机器人的token
+    restart: unless-stopped
+  
