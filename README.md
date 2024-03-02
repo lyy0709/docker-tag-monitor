@@ -19,7 +19,7 @@ services:
     restart: unless-stopped
   
 ```
-
+- API_URLS自行添加，使用,分隔
 ## API_URLS
 
 - 对于Docker Hub上的公共镜像，Registry API的基本URL格式如下：
